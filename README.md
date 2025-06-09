@@ -47,7 +47,7 @@ sintetizador_de_audio/
 ## Como Funciona
 
 #### 1. Gravação de Áudio com ADC
-O som ambiente é capturado pelo microfone da placa, conectado ao **GPIO 28 (Canal ADC 2)**. O sinal analógico é digitalizado a uma taxa de **8000 amostras por segundo (8 kHz)**. As amostras de 12 bits (0-4095) são armazenadas em um buffer na memória (`sample_buffer`).
+O som ambiente é capturado pelo microfone da placa, conectado ao **GPIO 28 (Canal ADC 2)**. O sinal analógico é digitalizado a uma taxa de **16000 amostras por segundo (8 kHz)** por 5 segundos. As amostras de 12 bits (0-4095) são armazenadas em um buffer na memória (`sample_buffer`).
 
 #### 2. Máquina de Estados e Controle por Botões
 O fluxo do programa é gerenciado por uma máquina de estados simples controlada por interrupções nos botões:

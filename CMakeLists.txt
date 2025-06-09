@@ -38,6 +38,11 @@ pico_sdk_init()
 add_executable( synth_audio
     src/ssd1306_i2c.c
     main.c
+    hal/hal_buttons.c
+    hal/hal_led.c
+    hal/hal_buzzer.c
+    hal/hal_mic.c
+    hal/hal_display.c
 )
 
 pico_set_program_name(synth_audio "synth_audio")
@@ -58,6 +63,7 @@ target_link_libraries(synth_audio
 target_include_directories(synth_audio PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
         ${CMAKE_CURRENT_LIST_DIR}/include
+        ${CMAKE_CURRENT_LIST_DIR}/hal
 )
 
 # Add any user requested libraries

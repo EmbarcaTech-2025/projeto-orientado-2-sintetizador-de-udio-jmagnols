@@ -34,7 +34,18 @@ O projeto utiliza a seguinte estrutura de pastas:
 
 ```
 sintetizador_de_audio/
-|-- inc/                  # Arquivos de cabeçalho (.h) para drivers
+|-- hal/                     # camada HAL
+|   |-- hal_buttons.h
+|   |-- hal_buttons.c
+|   |-- hal_led.h
+|   |-- hal_led.c
+|   |-- hal_mic.h
+|   |-- hal_mic.c
+|   |-- hal_buzzer.h
+|   |-- hal_buzzer.c
+|   |-- hal_display.h
+|   |-- hal_display.c
+|-- include/                  # Arquivos de cabeçalho (.h) para drivers
 |   |-- ssd1306.h
 |   |-- ssd1306_font.h
 |   |-- ssd1306_i2c.h

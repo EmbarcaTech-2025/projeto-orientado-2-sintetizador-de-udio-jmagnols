@@ -12,13 +12,21 @@ Brasília, junho de 2025
 
 Este projeto transforma a placa BitDogLab em um sintetizador de áudio simples, capaz de gravar, filtrar, visualizar e reproduzir clipes de som. Ele utiliza o microfone, os botões, o LED RGB e o display OLED da placa para criar uma experiência interativa completa.
 
+## Vídeo do projeto
+
+[![Vídeo do sintetizador](https://img.youtube.com/vi/Fc04BosU7tY.jpg)](https://youtube.com/shorts/Fc04BosU7tY?feature=share)
+
 ## Visão Geral
 
 O sintetizador opera através de uma máquina de estados controlada por dois botões:
 * **Botão A:** Inicia a gravação de um clipe de áudio de 2 segundos.
 * **Botão B:** Reproduz o último clipe de áudio gravado.
 
-Após a gravação, um filtro de **Janela de Blackman** é aplicado para suavizar o áudio, e a forma de onda resultante é exibida no display OLED.
+### Implementações extra
+
+* Após a gravação, um filtro de **Janela de Blackman** é aplicado para suavizar o áudio, e a forma de onda resultante é exibida no display OLED.
+
+* Além disso, o código roda com clkdiv=0, isto é, os delays são definidos ao longo da execução do código, fazendo com que seja possível configurar a frequência de gravação diferente da de reprodução caso isso seja desejado (pode ser usado para fazer a reprodução da voz de forma mais fina, por exemplo)
 
 ## Estrutura de Arquivos
 
